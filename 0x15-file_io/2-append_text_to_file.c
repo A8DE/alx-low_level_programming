@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * append_text_to_file -Function  Appends Text End File.
+ * append_text_to_file - Function  Appends Text End File.
  * @filename: Pointer Name File.
  * @text_content:String Add End File.
  * Return: If the function fails or filename is NULL -1.
@@ -19,14 +19,13 @@ int append_text_to_file(const char *filename, char *text_content)
 
 	o = open(filename, O_WRONLY | O_APPEND);
 	w = write(o, text_content, l);
-	
+
 	if (filename == NULL)
 		return (-1);
-	
+
 	if (o == -1 || w == -1)
 		return (-1);
 
 	close(o);
 	return (1);
 }
-
