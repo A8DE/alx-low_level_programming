@@ -23,3 +23,22 @@ char *create_buffer(char *fil)
 	return (b);
 }
 
+
+/**
+ * close_file - Fonction Closes File Descriptors.
+ * @fd: Parameter The File Descriptor Closed.
+ */
+void close_file(int fd)
+{
+	int cl;
+
+	cl = close(fd);
+if (cl == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
+		exit(100);
+	}
+}
+
+
+
