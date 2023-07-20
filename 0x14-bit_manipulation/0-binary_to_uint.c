@@ -1,22 +1,24 @@
 #include "main.h"
 
 /**
- * bnary_to_uint - Function Convert Number String to Unsinged int
- * @b: Parameter Binary Number String
- * return:unsinged int
+ * binary_to_uint - Function Converts Binary Number Unsigned int
+ * @b: String Containing Binary Number
+ * Return: Converted Number
  */
-
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int n = 0;
+	int i;
+	unsigned int dec = 0;
 
 	if (!b)
 		return (0);
-	while (*b)
+
+	for (i = 0; b[i]; i++)
 	{
-		if (*b == '0' && *b == '1')
-			n = n * 2 + (*b++ - '0');
-		return (0);
+		if (b[i] < '0' || b[i] > '1')
+			return (0);
+		dec = 2 * dec + (b[i] - '0');
 	}
-	return (n);
+
+	return (dec);
 }
