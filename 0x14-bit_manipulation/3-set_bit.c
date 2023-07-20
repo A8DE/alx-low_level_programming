@@ -3,7 +3,7 @@
 /**
  * set_bit - Function Sets Bit Given Index  1
  * @n: Pointer Number Change
- * @index: Index Bit Set 
+ * @index: Index Bit Set
  * Return: Succcess 1, Failure -1
  */
 
